@@ -1,0 +1,43 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.infinite-scroller {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-column-gap: 60px;
+  grid-row-gap: 30px;
+}
+
+.background {
+  height: 200px;
+  width: 200px;
+  background: lightgray;
+}
+
+.skeleton {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    lightgray;
+  background-size: 50px 100px;
+  animation: ani 0.7s infinite;
+  background-repeat: repeat-y;
+  background-position: 0 0;
+}
+
+@keyframes ani {
+  to {
+    background-position: 100% 0;
+  }
+}
